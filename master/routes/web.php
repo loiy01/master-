@@ -1,11 +1,14 @@
 <?php
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\AdminController;
+
 
 
 
@@ -55,9 +58,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('categories', CategoryController::class);
         Route::get('User', [UserController::class,'index'])->name('user.index');
         Route::delete('User-del/{id}', [UserController::class, 'distroy'])->name('user.delete');
-
-
-
+        Route::get('order-show', [OrderController::class,'index'])->name('order.index');
+        Route::get('message-show', [MessageController::class,'index'])->name('message.index');
+        Route::get('details-order/{id}', [OrderController::class,'detals'])->name('order.details');
+        Route::get('/admin/order-details/{id}', [OrderController::class, 'show'])->name('order.details');
     });
 });
 

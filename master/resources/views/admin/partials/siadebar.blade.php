@@ -3,7 +3,7 @@
 
                                             <ul class="dash__f-list">
                                                 <li>
-                                                <a href="">
+                                                <a href="{{route('admin.dashboard')}}">
                                                     <div class="admin_list">
                                                         <div class="admin_list_div" >
                                                               <img class="dash_img"  src="{{ asset('assets') }}/images/products/671fb4e759685_dashboard.png" alt="">
@@ -53,7 +53,7 @@
                                                 
                                                 
                                                 <li>
-                                                <a href="">
+                                                <a href={{ route('admin.order.index') }}>
                                                     <div class="admin_list">
                                                         <div class="admin_list_div" >
                                                               <img class="dash_img"  src="{{ asset('assets') }}/images/box_2.png" alt="">
@@ -75,7 +75,7 @@
                                                 </a>
                                                 </li>
                                                 <li>
-                                                <a href="">
+                                                <a href="{{route('admin.message.index')}}">
                                                     <div class="admin_list">
                                                         <div class="admin_list_div" >
                                                               <img class="dash_img"  src="{{ asset('assets') }}/images/email.png" alt="">

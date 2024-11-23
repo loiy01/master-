@@ -11,7 +11,7 @@ class UserController extends Controller
         $users = User::all();
         return view("admin.users.user",compact("users"));
     }
-    public function distroy($id ){
+    public function distroy($id){
          $user = User::findOrFail($id);
         $user->delete();
        
