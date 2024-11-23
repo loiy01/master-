@@ -40,9 +40,6 @@
                                                 <div class="dash__pad-3">
                                                     <h2 class="dash__h1 u-s-m-b-8"
                                                         style="text-align:center;font-size:30px">Total Sales</h2>
-                                                        <h2 class="dash__h1 u-s-m-b-8" style="text-align:center;font-size:30px">Total Sales</h2>
-<h1 class="dash__h1 u-s-m-b-10" style='font-size:40px;padding-top:24px'>{{ $totalSales }} JD</h1>
-
                                                     <div class="dash__link dash__link--secondary u-s-m-b-8">
 
                                                         <a href="dash-edit-profile.html"></a>

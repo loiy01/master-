@@ -86,11 +86,11 @@
                                                 </a>
                                                 </li>
                                                 <li>
-                                                <a href="">
+                                                <a href="{{route('admin.mainteance_requests.index')}}">
                                                     <div class="admin_list">
                                                         <div class="admin_list_div" >
-                                                              <img class="dash_img"  src="{{ asset('assets') }}/images/icons8-star-16.png" alt="">
-                                                              <p>Reviews</p>
+                                                              <img class="dash_img"  src="{{ asset('assets') }}/images/edit.png" alt="">
+                                                              <p>mainteance_requests</p>
                                                         </div>
                                                         <img style="width:12px" src="/public/images/angle-right.png" alt="">
                                                     </div>

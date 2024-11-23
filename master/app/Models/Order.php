@@ -20,16 +20,9 @@ class Order extends Model
     ];
     public function user(){
         return $this->belongsTo(User::class,'user_id');
-
     }
-    public function showOrderDetails($orderId)
-    {
-        // استرجاع البيانات من قاعدة البيانات
-        $order = Order::with('orderItems')->findOrFail($orderId);
-
-        // تمرير البيانات إلى الـ View
-        return view('admin.order_details', compact('order'));
-    }
+    
+  
  
 }
 
