@@ -47,6 +47,9 @@
 
                                                     <h1 class="dash__h1 u-s-m-b-10"
                                                         style='font-size:40px;padding-top:24px'>
+                                                        {{$totalSales}}</h1>
+
+            
                                                     <br>
                                                     <span class="dash__text">From
                                                         <?php echo date('Y-m-d', strtotime('-30 days')); ?></span>
@@ -66,7 +69,7 @@
                                                     </div>
                                                     <h1 class="dash__h1 u-s-m-b-10"
                                                         style='font-size:40px;padding-top:24px'><?php
-                                                        ?> </h1>
+                                                        ?> {{$totalCustomers}}</h1>
                                                     <span class="dash__text"></span>
                                                 </div>
                                             </div>
@@ -80,7 +83,7 @@
                                                     </div>
                                                     <h1 class="dash__h1 u-s-m-b-10"
                                                         style='font-size:40px;padding-top:24px'><?php
-                                                        ?> </h1>
+                                                        ?> {{ $totalMessages}} </h1>
                                                     <span class="dash__text"></span>
                                                 </div>
                                             </div>

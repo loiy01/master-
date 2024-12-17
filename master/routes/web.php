@@ -1,8 +1,10 @@
 <?php
+use App\Http\Controllers\Admin\AppointmentsController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\admin\MainteanceController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
@@ -36,6 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/home', [Controller::class, 'home'])->name('home');
+   
 });
 
 
@@ -62,7 +66,15 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('order-show', [OrderController::class,'index'])->name('order.index');
         Route::get('message-show', [MessageController::class,'index'])->name('message.index');
         Route::get('mainteance_requests-show', [MainteanceController::class,'index'])->name('mainteance_requests.index');
+        Route::patch('mainteance_requests/{id}/toggle-status', [MainteanceController::class, 'toggleStatus'])->name('maintance_requests.toggleStatus');
+        Route::get('appointment-show', [AppointmentsController::class,'index'])->name('appointments.index');
+        Route::patch('appointments/{id}/toggle-status', [AppointmentsController::class, 'toggleStatus'])->name('appointments.toggleStatus');
+
+
+        Route::get('/orders/{id}', [OrderController::class, 'showOrderItems'])->name('orders.show');
+        
     });
+     
 });
 
 

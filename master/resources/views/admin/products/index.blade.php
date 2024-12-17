@@ -18,6 +18,8 @@
                                     </a>
 
                                     <div class="table-responsive">
+                                    
+
                                         <table class="dash__table">
                                             <thead>
                                                 <tr>
@@ -138,9 +140,9 @@
 }
 
 /* تحسين المظهر العام */
-.dash__table tr:nth-child(even) {
+/* .dash__table tr:nth-child(even) {
     background-color: #f9f9f9;
-}
+} */
 
 .dash__table tr:hover {
     background-color: #f5f5f5;

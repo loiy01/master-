@@ -20,15 +20,6 @@ class Admin extends Authenticatable
     protected $hidden = [
         'password',
     ];
-    public function categories(){
-        return $this->belongsToMany(Category::class);
-    }
-    public function users(){
-        return $this->hasmany(User::class);
-    }
-    public function product(){
-        return $this->hasMany(Product::class);
-    }
     
     
 

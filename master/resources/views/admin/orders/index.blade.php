@@ -38,7 +38,6 @@
 
                                     <span class="dash__text u-s-m-b-30">Here you can see all products that have been
                                         delivered.</span>
-
                                         <div class="dash__filter">
                                                 <form method="GET" action="/deliveryStatus" id="categoryForm">
                                                     <select class="select-box select-box--primary-style" style="border-radius:6px" name="id" id="categoryFilter" onchange="this.form.submit()">
@@ -67,7 +66,7 @@
                                                     <thead>
                                                         <tr>
                                                             <th>Order Id</th>
-                                                            <th>user_id</th>
+                                                            <th>user_name</th>
                                                             <th>Placed On</th>
                                                             <th>Order Status</th>
                                                             <th>Total</th>
@@ -84,8 +83,8 @@
                                                             <th>{{ $order->created_at}}</th>
                                                             <th>{{ $order->status}}</th>
                                                             <th>{{ $order->total_order}}
-                                                            <form method='GET' >
-                                                                        <input type='text' value={{$order->id}} name='id' style='visibility: hidden;display: none;'>
+                                                            <form method='GET' action={{route('admin.orders.show',$order->id)}} >
+                                                                        <input type='text'  value={{$order->id}} name='id' style='visibility: hidden;display: none;'>
                                                                         <button type='submit' class='address-book-edit btn--e-transparent-platinum-b-2' style='border:0;color:#ff4500'><a>MANAGE</a></button>
                                                                     </form>
                                                             </th>

@@ -16,7 +16,15 @@ class UserController extends Controller
         $user->delete();
        
         return redirect()->route('admin.user.index')->with('success', 'Product deleted successfully!');
-       
-
     }
+ 
+    
+
+    
 }
+
+    
+    
+    
+    
+

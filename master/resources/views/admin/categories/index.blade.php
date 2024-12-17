@@ -15,10 +15,7 @@
                                     <!--====== Dashboard Features ======-->
                                     @include('admin.partials.siadebar')
 
-                                    <a class="dash__custom-link btn--e-brand-b-2" href="{{ route('admin.categories.create') }}">
-                                    <i class="fas fa-plus u-s-m-r-8"></i>
-                                    <span>Add New Category</span>
-                                </a>
+                                    
                                     <!--====== End - Dashboard Features ======-->
                                 </div>
 
@@ -28,6 +25,10 @@
                                 <div class="dash__pad-2">
                                     <div class="dash__address-header">
                                         <h1 class="dash__h1">Categories</h1>
+                                        <a class="dash__custom-link btn--e-brand-b-2" href="{{ route('admin.categories.create') }}">
+                                    <i class="fas fa-plus u-s-m-r-8"></i>
+                                    <span>Add New Category</span>
+                                </a>
                                     </div>
                                 </div>
 

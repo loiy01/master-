@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('manufacturer_name');
             $table->text('description');
             $table->unsignedBigInteger('user_id');
+            $table->boolean('show')->default(false);
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

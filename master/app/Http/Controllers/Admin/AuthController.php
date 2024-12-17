@@ -7,6 +7,9 @@ use App\Models\Admin;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Order;
+use App\Models\User;
+use App\Models\Message;
 
 class AuthController extends Controller
 {
@@ -50,6 +53,19 @@ class AuthController extends Controller
 
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $totalSales = Order::sum('total_order'); // إجمالي المبيعات
+        $totalCustomers = User::count(); // عدد العملاء
+        $totalMessages = Message::count(); // عدد الرسائل
+        $recentOrders = Order::latest()->take(5)->get(); // آخر 5 طلبات
+        // dd($totalSales);
+        
+        return view('admin.dashboard', compact('totalSales', 'totalCustomers', 'totalMessages', 'recentOrders'));
+    
     }
+    public function new(){
+        return view("admin.dashboards");
+       
+    }
+    
+
 }

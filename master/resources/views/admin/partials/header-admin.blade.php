@@ -92,7 +92,10 @@
     --color-5: #FFF8DC;  /* Background color */
 }
 body {
-    background-color: #FFFAF3;
+    /* background-color: #FFFAF3; */
+    background-image: url("{{asset('assets')}}/images/tools-table.jpg");
+
+
 }
 
 .container-xxl{

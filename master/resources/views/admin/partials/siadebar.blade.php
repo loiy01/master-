@@ -6,7 +6,7 @@
                                                 <a href="{{route('admin.dashboard')}}">
                                                     <div class="admin_list">
                                                         <div class="admin_list_div" >
-                                                              <img class="dash_img"  src="{{ asset('assets') }}/images/products/671fb4e759685_dashboard.png" alt="">
+                                                              <img class="dash_img"  src="{{ asset('assets') }}/images/icons8-dashboard-16.png" alt="">
                                                               <p>Dashboard</p>
                                                         </div>
                                                         <img style="width:12px" src="/public/images/angle-right.png" alt="">
@@ -67,7 +67,7 @@
                                                 <a href="{{route('admin.user.index')}}">
                                                     <div class="admin_list">
                                                         <div class="admin_list_div" >
-                                                              <img class="dash_img"  src="{{ asset('assets') }}/images/products/671fb3380fb81_user.png" alt="">
+                                                              <img class="dash_img"  src="{{ asset('assets') }}/images/icons8-customer-16.png" alt="">
                                                               <p>Customers</p>
                                                         </div>
                                                         <img style="width:12px" src="/public/images/angle-right.png" alt="">
@@ -91,6 +91,17 @@
                                                         <div class="admin_list_div" >
                                                               <img class="dash_img"  src="{{ asset('assets') }}/images/edit.png" alt="">
                                                               <p>mainteance_requests</p>
+                                                        </div>
+                                                        <img style="width:12px" src="/public/images/angle-right.png" alt="">
+                                                    </div>
+                                                </a>
+                                                </li>
+                                                <li>
+                                                <a href="{{route('admin.appointments.index')}}">
+                                                    <div class="admin_list">
+                                                        <div class="admin_list_div" >
+                                                              <img class="dash_img"  src="{{ asset('assets') }}/images/edit.png" alt="">
+                                                              <p>appointment</p>
                                                         </div>
                                                         <img style="width:12px" src="/public/images/angle-right.png" alt="">
                                                     </div>

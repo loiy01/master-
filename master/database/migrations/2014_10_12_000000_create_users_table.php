@@ -17,9 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('phone')->nullable()->change();
-            $table->string('address')->nullable()->change();
-            
+            $table->string('phone')->required(); // إزالة nullable لجعل الحقل ضروري
+            $table->string('address')->required(); // إزالة nullable لجعل الحقل ضروري
             $table->rememberToken();
             $table->timestamps();
         });

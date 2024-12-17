@@ -28,7 +28,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="dash__table">
+                                    <div class="dash__table ">
                                         <table class="dash__table">
                                             <thead>
                                                 <tr>

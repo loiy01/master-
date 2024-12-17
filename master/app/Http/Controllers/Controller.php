@@ -18,7 +18,12 @@ class Controller extends BaseController
         $totalCustomers = User::count(); // عدد العملاء
         $totalMessages = Message::count(); // عدد الرسائل
         $recentOrders = Order::latest()->take(5)->get(); // آخر 5 طلبات
-
+        dd($totalSales);
         return view('admin.dashboard', compact('totalSales', 'totalUser', 'totalMessages', 'recentOrders'));
+        
+    }
+    public function home()
+    {
+        return view('auth.user.home');
     }
 }

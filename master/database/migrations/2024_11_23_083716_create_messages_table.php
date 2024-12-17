@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('message_subject'); // العمود message_subject
             $table->text('message_text'); // العمود message_text
-            $table->timestamps(); 
+            $table->timestamps();   
         });
     }
 

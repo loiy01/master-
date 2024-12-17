@@ -23,8 +23,10 @@
                                                     <th>id</th> <!-- عمود جديد للصورة -->
                                                     <th>manufacturer_name</th>
                                                     <th>user_name</th>
-                                                    <th>user_id</th>
+                                                    <th>user phone</th>
                                                     <th>desciption</th>
+                                                    <th>actions</th>
+
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -34,9 +36,17 @@
                                                         <td>{{ $main->id}}</td>
                                                         <td>{{ $main->manufacturer_name }}</td>
                                                         <td>{{ $main->user ? $main->user->name : 'No User' }}</td>
-                                                        <td>{{ $main->user_id}}</td>
-
+                                                        <td>{{ $main->user ? $main->user->phone : 'No phone' }}</td>
                                                         <td>{{ $main->description}}</td>
+                                                        <td style="display: flex; justify-content: center;">
+                                                        <form action="{{ route('admin.maintance_requests.toggleStatus', $main->id) }}" method="POST" style="display:inline;">
+                                                            @csrf
+                                                            @method('PATCH')
+                                                            <button type="submit" class="btn btn-sm {{ $main->show ? 'btn-danger' : 'btn-success' }}">
+                                                                {{ $main->show ? 'show' : 'new' }}
+                                                            </button>
+                                                        </form>
+                                                        </td>
                                                         
                                                        
                                                     <td>
