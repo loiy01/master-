@@ -147,6 +147,12 @@
                                             </div>
                                         </div>
                                         <div class="dash-l-r u-s-m-b-8">
+                                            <div class="manage-o__text-2 u-c-secondary">location</div>
+                                            <div class="manage-o__text-2 u-c-secondary">
+                                                <?php echo $orderData['delivery_location']; ?>
+                                            </div>
+                                        </div>
+                                        <div class="dash-l-r u-s-m-b-8">
                                             <div class="manage-o__text-2 u-c-secondary">
                                                 <span class="dash__text-2">Paid by Cash on Delivery</span>
                                             </div>

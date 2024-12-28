@@ -5,8 +5,12 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\admin\MainteanceController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\user\AppointmentController;
+use App\Http\Controllers\user\CartController;
+use App\Http\Controllers\User\ContactController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProductController;
@@ -25,10 +29,23 @@ use App\Http\Controllers\Admin\AdminController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+// @if (Route::has('login'))
+// <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+//     @auth
+//         <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+//     @else
+//         <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+
+//         @if (Route::has('register'))
+//             <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+//         @endif
+//     @endauth
+// </div>
+// @endif
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -38,9 +55,29 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/home', [Controller::class, 'home'])->name('home');
+    Route::post('/ap', [AppointmentController::class, 'store'])->name('ap.store');
+    Route::get('/prod', [\App\Http\Controllers\user\ProductController::class, 'index'])->name('prod');
+    Route::post('/cart', [CartController::class, 'store'])->name('cart.store'); // لإضافة منتج إلى السلة
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index'); // لعرض السلة
+    Route::put('/cart/{productId}', [CartController::class, 'update'])->name('cart.update'); // لتحديث الكمية
+    Route::get('/cart/remove/{productId}', [CartController::class, 'remove'])->name('cart.remove'); // لإزالة منتج من السلة
+    Route::post('/checkout', [CartController::class, 'checkout'])->name('checkout');
+    
+    
+Route::post('/man', [\App\Http\Controllers\user\MainteanceController::class, 'store'])->name('man');
+
    
 });
+Route::get('/ap', [AppointmentController::class, 'index'])->name('ap');
+Route::get('/ma', [\App\Http\Controllers\user\MainteanceController::class, 'index'])->name('ma');
+
+Route::get('/prod', [\App\Http\Controllers\user\ProductController::class, 'index'])->name('prod');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/con', [ContactController::class, 'store'])->name('con');
+
+
+
+
 
 
 Route::prefix('admin')->name('admin.')->group(function () {

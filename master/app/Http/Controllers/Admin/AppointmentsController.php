@@ -8,10 +8,22 @@ use Illuminate\Http\Request;
 
 class AppointmentsController extends Controller
 {
-      public function index(){
+  public function index(Request $request){
+    // تحقق من وجود الفلتر 'show' في الـ request
+    $show = $request->input('show');
+
+    // إذا كان الفلتر 'show' موجودًا وكان غير فارغ، نقوم بتصفية البيانات بناءً عليه
+    if ($show !== null) {
+        $appointments = Appointments::where('show', $show)->get();
+    } else {
+        // إذا لم يكن هناك فلتر، نقوم بجلب جميع السجلات
         $appointments = Appointments::all();
-        return view("admin.appointments.index",compact("appointments"));
-      }
+    }
+
+    // إرجاع الـ view مع الـ appointments المفلترة أو جميعها
+    return view("admin.appointments.index", compact("appointments"));
+}
+
       public function toggleStatus($id)
       {
           // البحث عن السجل في جدول Mainteance

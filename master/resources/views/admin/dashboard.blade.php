@@ -20,7 +20,7 @@
 
                             <!--====== Dashboard Features ======-->
                             
-                            @include('admin.partials.siadebar');
+                            @include('admin.partials.siadebar')
                            
                             
                             <!--====== End - Dashboard Features ======-->

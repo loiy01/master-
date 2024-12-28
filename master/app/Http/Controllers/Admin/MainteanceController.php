@@ -8,10 +8,20 @@ use Illuminate\Http\Request;
 
 class MainteanceController extends Controller
 {
-    public function index(){
-        $mainteances=Mainteance::all();
-        return view("admin.mainteance_requests.index" ,compact("mainteances"));
+    public function index(Request $request)
+{
+    // إذا كان الفلتر موجودًا
+    $show_filter = $request->get('show_filter');
+
+    // تطبيق الفلتر إذا كان موجودًا
+    if ($show_filter !== null) {
+        $mainteances = Mainteance::where('show', $show_filter)->get();
+    } else {
+        $mainteances = Mainteance::all();
     }
+
+    return view("admin.mainteance_requests.index", compact("mainteances"));
+}
     public function toggleStatus($id)
     {
         // البحث عن السجل في جدول Mainteance

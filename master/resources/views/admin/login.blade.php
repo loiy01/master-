@@ -102,7 +102,7 @@
 <body>
     <div class="login-box">
         <div class="logo">
-            <img class="dash_img" src="{{ asset('assets') }}/images/logo.png" alt="Logo">
+            <img class="dash_img" src="{{ asset('assets') }}/images/logo1.png" alt="Logo">
         </div>
         <h2>Admin Login</h2>
         <form action="{{ route('admin.login') }}" method="POST">

@@ -12,18 +12,6 @@ use App\Models\Message;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
-    public function index()
-    {
-        $totalSales = Order::sum('order_total_amount_after'); // إجمالي المبيعات
-        $totalCustomers = User::count(); // عدد العملاء
-        $totalMessages = Message::count(); // عدد الرسائل
-        $recentOrders = Order::latest()->take(5)->get(); // آخر 5 طلبات
-        dd($totalSales);
-        return view('admin.dashboard', compact('totalSales', 'totalUser', 'totalMessages', 'recentOrders'));
-        
-    }
-    public function home()
-    {
-        return view('auth.user.home');
-    }
+   
+    
 }

@@ -10,6 +10,10 @@ class Mainteance extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
+        'manufacturer_name',
+        'description',
+        'show',
 
     ];
 

@@ -301,7 +301,6 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-image: url(../images/banner-bg.png);
     height: auto;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -315,8 +314,9 @@ button {
     background-color: transparent !important;
 }
 
-.logo {
-    width: auto;
+.logo img {
+    height: 70px; /* يمكنك زيادة أو تقليص هذه القيمة حسب الحجم الذي تريده */
+    width: 70px;  /* نفس الشيء هنا */
 }
 
 .ml-auto,
@@ -328,7 +328,7 @@ button {
     padding-right: 10px;
     padding-left: 10px;
     font-size: 18px;
-    color: #000000;
+    color: #ffffff;
     text-transform: uppercase;
 }
 
@@ -400,35 +400,69 @@ button {
 
 .banner_section {
     width: 100%;
-    float: left;
-    padding: 90px 0px;
+    padding: 90px 0;
 }
 
 .banner_taital_main {
     width: 43%;
-    float: left;
+    float: right;
+    text-align: right;
+    direction: rtl;
+    padding-right: 2rem; /* إضافة حشوة على اليمين */
+    padding-left: 2rem; /* إضافة حشوة على اليسار */
+    box-sizing: border-box; /* لضمان أن الحشوة لا تؤثر على العرض الكلي */
 }
 
 .banner_taital {
     width: 100%;
-    float: left;
+    float: right;
     font-size: 60px;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: bold;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     line-height: 70px;
     font-family: 'Poppins', sans-serif;
+    text-align: right;
+    direction: rtl;
+    padding-right: 2rem; /* إضافة حشوة على اليمين */
+    padding-left: 2rem; /* إضافة حشوة على اليسار */
+    box-sizing: border-box; /* لضمان أن الحشوة لا تؤثر على العرض الكلي */
 }
 
 .banner_text {
     width: 100%;
-    float: left;
+    float: right;
     font-size: 16px;
     color: #ffffff;
-    margin-left: 0px;
+    margin-right: 0;
     font-family: 'Poppins', sans-serif;
+    text-align: right;
+    direction: rtl;
+    padding-right: 2rem; /* إضافة حشوة على اليمين */
+    padding-left: 2rem; /* إضافة حشوة على اليسار */
+    box-sizing: border-box; /* لضمان أن الحشوة لا تؤثر على العرض الكلي */
 }
+
+/* وسائط مستجيبة لتعديل الحشوات بناءً على حجم الشاشة */
+@media (max-width: 768px) {
+    .banner_taital_main,
+    .banner_taital,
+    .banner_text {
+        padding-right: 1rem; /* تقليل الحشوة على الشاشات الصغيرة */
+        padding-left: 1rem; /* تقليل الحشوة على الشاشات الصغيرة */
+    }
+}
+
+@media (max-width: 576px) {
+    .banner_taital_main,
+    .banner_taital,
+    .banner_text {
+        padding-right: 0.5rem; /* تقليل الحشوة أكثر على الشاشات الصغيرة جداً */
+        padding-left: 0.5rem; /* تقليل الحشوة أكثر على الشاشات الصغيرة جداً */
+    }
+}
+
 
 .btn_main {
     width: 100%;

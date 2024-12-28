@@ -629,7 +629,7 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
     color: #7f7f7f !important; }
   
   .u-c-silver {
-    color: #a0a0a0 !important; }
+    color: #ffffff !important; }
   
   /*
     * Display Utility
@@ -3467,7 +3467,7 @@ custom-colors, box-mode, custom-header, custom-menu, custom-logo, featured-image
     display: block;
     font-size: 13px;
     font-weight: 600;
-    color: #7f7f7f; }
+    color: #ffffff; }
   
   .dash__link > a {
     font-size: 13px;
