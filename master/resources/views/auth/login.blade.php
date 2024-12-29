@@ -124,18 +124,39 @@
         <div class="logo">
             <img class="dash_img" src="{{ asset('assets') }}/images/logo1.png" alt="Logo">
         </div>
-        <h2>تسجيل الدخول</h2> <!-- Change the text to User Login -->
-        <form action="{{ route('login') }}" method="POST"> <!-- Use the correct route for user login -->
+        <h2>تسجيل الدخول</h2>
+        <form action="{{ route('login') }}" method="POST">
             @csrf
-            <input type="email" name="email" placeholder="البريد الاكنروني" required>
+
+            <!-- Input Email -->
+            <input type="email" name="email" placeholder="البريد الإلكتروني" required value="{{ old('email') }}">
+            @error('email')
+                <div class="error" style="color: red; font-size: 12px; margin-top: 5px;">
+                    {{ $message }}
+                </div>
+            @enderror
+
+            <!-- Input Password -->
             <input type="password" name="password" placeholder="الرقم السري" required>
+            @error('password')
+                <div class="error" style="color: red; font-size: 12px; margin-top: 5px;">
+                    {{ $message }}
+                </div>
+            @enderror
+
+            <!-- Display error for login attempt -->
+            @if(session('error'))
+                <div class="error" style="color: red; font-size: 12px; margin-top: 5px;">
+                    {{ session('error') }}
+                </div>
+            @endif
+
             <button type="submit">التسجيل</button>
         </form>
-        <!-- New user button -->
+
         <div class="register-link">
             <a href="{{ route('register') }}" class="register-btn">مستخدم جديد؟</a>
         </div>
     </div>
 </body>
-
 </html>

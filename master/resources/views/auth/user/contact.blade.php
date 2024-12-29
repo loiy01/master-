@@ -2,7 +2,7 @@
 <div class="images">
 @include("auth.user.partials.navbar")
 
-    <!-- محتوى داخلي إذا لزم -->
+    
 </div>
 
 <div class="contact_section layout_padding">

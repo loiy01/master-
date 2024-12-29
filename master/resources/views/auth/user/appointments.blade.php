@@ -3,7 +3,7 @@
 <style>
     /* تنسيق حاوية النموذج */
     .form-container {
-        background-color: #2c3e50;
+        background-color:rgb(49, 62, 66);
         color: white;
         padding: 30px;
         border-radius: 15px;
@@ -60,7 +60,7 @@
     }
 
     .form-group button {
-        background-color: #3498db;
+        background-color: #fda417;
         color: white;
         padding: 14px;
         width: 100%;
@@ -124,6 +124,19 @@
     @include("auth.user.partials.navbar")
 </div>
 
+<!-- عرض الرسائل (النجاح والخطأ) -->
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+@if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
+
 <div class="form-container">
     <h3>إجراء الحجز</h3>
     <form action="{{ route('ap.store') }}" method="POST">
@@ -138,18 +151,21 @@
         </div>
 
         <div class="form-group">
-    <label for="time" class="text-right">وقت الحجز:</label>
-    <input type="datetime-local" id="time" name="time" dir="rtl" required class="form-control">
-</div>
+            <label for="time" class="text-right">وقت الحجز:</label>
+            <input type="datetime-local" id="time" name="time" dir="rtl" required class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="location" class="text-right">الموقع</label>
+            <input type="text" id="location" name="location" rows="4" placeholder="الموقع">
+        </div>
 
         <div class="form-group">
             <label for="description" class="text-right">وصف إضافي:</label>
             <textarea id="description" name="description" rows="4" placeholder="اكتب أي تفاصيل إضافية هنا..."></textarea>
         </div>
-        <div class="form-group">
-            <label for="location" class="text-right">الموقع</label>
-            <input type="text" id="location" name="location" rows="4" placeholder="الموقع"></>
-        </div>
+
+        
 
         <div class="form-group">
             <button type="submit">إرسال الحجز</button>
@@ -159,8 +175,6 @@
 
 <!-- قسم مشاريع كور -->
 
-
 <!-- قسم مشاريع قص -->
-
 
 @include("auth.user.partials.footer")

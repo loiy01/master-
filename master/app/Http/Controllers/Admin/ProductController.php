@@ -8,9 +8,16 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::with('category')->get();
+        $query = Product::with('category');
+    
+        // تحقق إذا كان هناك طلب بحث
+        if ($request->has('search') && $request->search != '') {
+            $query->where('name', 'like', '%' . $request->search . '%');
+        }
+    
+        $products = $query->get();
         return view('admin.products.index', compact('products'));
     }
 

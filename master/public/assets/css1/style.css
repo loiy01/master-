@@ -345,7 +345,7 @@ button {
 }
 
 .navbar {
-    padding: 30px 0px 30px 0px;
+    padding: 15px 0px;
 }
 
 .login_text {}
@@ -751,7 +751,7 @@ button {
     width: 100%;
     float: left;
     font-size: 40px;
-    color: #192955;
+    color: black;
     font-weight: 600;
     padding-bottom: 30px;
 }

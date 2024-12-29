@@ -17,7 +17,7 @@ class AppointmentsController extends Controller
         $appointments = Appointments::where('show', $show)->get();
     } else {
         // إذا لم يكن هناك فلتر، نقوم بجلب جميع السجلات
-        $appointments = Appointments::all();
+        $appointments = Appointments::paginate(5);
     }
 
     // إرجاع الـ view مع الـ appointments المفلترة أو جميعها

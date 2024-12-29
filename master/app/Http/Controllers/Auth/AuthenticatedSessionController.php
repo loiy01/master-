@@ -7,6 +7,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
@@ -23,13 +24,26 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request): RedirectResponse
+    public function store(Request $request)
     {
-        $request->authenticate();
-
-        $request->session()->regenerate();
-
-        return redirect()->intended(RouteServiceProvider::HOME);
+        // التحقق من المدخلات
+        $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required', 'min:8'],
+        ]);
+    
+        // محاولة تسجيل الدخول
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            // تسجيل الدخول ناجح
+            return redirect()->intended('/dashboard');
+        }
+    
+        // إذا فشل تسجيل الدخول، إعادة توجيه مع رسالة خطأ
+        return Redirect::back()
+            ->withErrors([
+                'email' => 'البريد الإلكتروني أو كلمة المرور غير صحيحة.',
+            ])
+            ->withInput();
     }
 
     /**

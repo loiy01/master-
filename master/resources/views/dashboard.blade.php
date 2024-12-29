@@ -1,6 +1,6 @@
 @include("auth.user.partials.header")
 
-<!-- Include Navbar -->
+
 <div class="images">
     @include("auth.user.partials.navbar")
 </div>
@@ -32,3 +32,4 @@
         </div>
     </div>
 </div>
+@include("auth.user.partials.footer")

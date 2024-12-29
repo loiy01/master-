@@ -12,14 +12,21 @@
                         <div class="col-lg-9 col-md-12">
                             <div class="dash__box dash__box--shadow dash__box--radius dash__box--bg-white">
                                 <div class="dash__pad-2">
-                                    <h1 class="dash__h1 u-s-m-b-14">Products</h1>
+                                    <div class="header-with-search">
+                                        <h1 class="dash__h1 u-s-m-b-14">Products</h1>
+
+                                        <!-- Form للبحث -->
+                                        <form action="{{ route('admin.products.index') }}" method="GET" class="search-form">
+                                            <input type="text" name="search" placeholder="Search products..." value="{{ request('search') }}" class="form-input">
+                                            <button type="submit" class="btn btn--e-brand-b-2">Search</button>
+                                        </form>
+                                    </div>
+
                                     <a class="btn btn--e-brand-b-2 u-s-m-b-20" href="{{ route('admin.products.create') }}">
                                         <i class="fas fa-plus u-s-m-r-8"></i>Add New Product
                                     </a>
 
                                     <div class="table-responsive">
-                                    
-
                                         <table class="dash__table">
                                             <thead>
                                                 <tr>
@@ -73,6 +80,27 @@
 </div>
 
 <style>
+/* تنسيق البحث */
+.header-with-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 300px;
+}
+
+/* باقي التنسيقات */
 .table-responsive {
     width: 100%;
 }
@@ -91,7 +119,6 @@
     word-wrap: break-word;
 }
 
-/* تحديد عرض الأعمدة */
 .image-column {
     width: 80px;
 }
@@ -108,7 +135,6 @@
     width: 180px;
 }
 
-/* تنسيق الصورة */
 .product-image {
     width: 50px;
     height: 50px;
@@ -116,7 +142,6 @@
     border-radius: 4px;
 }
 
-/* تنسيق الأزرار */
 .action-buttons {
     display: flex;
     gap: 8px;
@@ -131,18 +156,12 @@
     font-size: 14px;
 }
 
-/* تعديل النصوص الطويلة */
 .description-column {
     max-width: 200px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
-/* تحسين المظهر العام */
-/* .dash__table tr:nth-child(even) {
-    background-color: #f9f9f9;
-} */
 
 .dash__table tr:hover {
     background-color: #f5f5f5;

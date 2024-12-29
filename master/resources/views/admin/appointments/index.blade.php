@@ -1,3 +1,4 @@
+
 @include("admin.partials.header-admin")
 
 <div class="app-content">
@@ -59,8 +60,13 @@
                                                     </td>
                                                 </tr>
                                             @endforeach
+                                            
                                         </tbody>
                                     </table>
+                                    
+                                    <div class="pagination" style="display: flex; justify-content: center;">
+                                        {{$appointments->links('pagination::bootstrap-4')}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
