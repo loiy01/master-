@@ -15,9 +15,9 @@ class MainteanceController extends Controller
 
     // تطبيق الفلتر إذا كان موجودًا
     if ($show_filter !== null) {
-        $mainteances = Mainteance::where('show', $show_filter)->get();
+        $mainteances = Mainteance::where('show', $show_filter)->paginate();
     } else {
-        $mainteances = Mainteance::all();
+        $mainteances = Mainteance::paginate(10);
     }
 
     return view("admin.mainteance_requests.index", compact("mainteances"));

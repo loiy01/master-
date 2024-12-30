@@ -36,32 +36,15 @@
                                 <div class="dash__pad-2">
                                     <h1 class="dash__h1 u-s-m-b-14">Orders</h1>
 
-                                    <span class="dash__text u-s-m-b-30">Here you can see all products that have been
-                                        delivered.</span>
-                                        <div class="dash__filter">
-                                                <form method="GET" action="/deliveryStatus" id="categoryForm">
-                                                    <select class="select-box select-box--primary-style" style="border-radius:6px" name="id" id="categoryFilter" onchange="this.form.submit()">
-                                                        <option value="all">All Orders</option>
-                                                           <option value="processing" 
-                                                                <?= isset($_GET['id']) && $_GET['id'] == 'processing' ? 'selected' : '' ?>>
-                                                                Processing
-                                                            </option>
-                                                            <option value="shipped" 
-                                                                <?= isset($_GET['id']) && $_GET['id'] == 'shipped' ? 'selected' : '' ?>>
-                                                                Shipped
-                                                            </option>
-                                                            <option value="delivered" 
-                                                                <?= isset($_GET['id']) && $_GET['id'] == 'delivered' ? 'selected' : '' ?>>
-                                                                Delivered
-                                                            </option>
-                                                            <option value="cancelled" 
-                                                                <?= isset($_GET['id']) && $_GET['id'] == 'cancelled' ? 'selected' : '' ?>>
-                                                                Cancelled
-                                                            </option>
-                                                    </select>
-                                                </form>
-                                            </div>
-                                   
+
+                                    <form method="GET" action="{{ route('admin.order.index') }}">
+                                        <select name="status" style="width:200px" class="form-control" onchange="this.form.submit()">
+                                            <option value="">all</option>
+                                            <option value="pending" {{ request('status') == 'pending' ? 'selected' : '' }}>Pending</option>
+                                            <option value="confirmed" {{ request('status') == 'confirmed' ? 'selected' : '' }}>Confirmed</option>
+                                            <option value="canceled" {{ request('status') == 'canceled' ? 'selected' : '' }}>Cancelled</option>
+                                        </select>
+                                    </form>
                                                 <table class="dash__table">
                                                     <thead>
                                                         <tr>
@@ -95,6 +78,9 @@
                                                         @endforeach
                                                     </tbody>
                                                 </table>
+                                                <div class="pagination" style="display: flex; justify-content: center;">
+                                                    {{$orders->links('pagination::bootstrap-4')}}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

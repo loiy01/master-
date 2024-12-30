@@ -9,11 +9,20 @@ use App\Http\Controllers\Controller;
 class CategoryController extends Controller
 {
     // عرض جميع الفئات
-    public function index()
-    {
-        $categories = Category::all();
-        return view('admin.categories.index', compact('categories'));
+    public function index(Request $request)
+{
+    $query = Category::query();
+
+    // تحقق إذا كان هناك طلب بحث
+    if ($request->has('search') && $request->search != '') {
+        $query->where('name', 'like', '%' . $request->search . '%');
     }
+
+    // استخدام pagination لجلب النتائج
+    $categories = $query->paginate(5); // يعرض 10 عناصر في كل صفحة
+
+    return view('admin.categories.index', compact('categories'));
+}
 
     // عرض صفحة إضافة فئة جديدة
     public function create()

@@ -16,12 +16,14 @@
                                         <h1 class="dash__h1 u-s-m-b-14">mainteance_requests</h1>
 
                                         <!-- فلتر حالة العرض في مربع صغير -->
-                                        <form method="GET" action="{{ route('admin.mainteance_requests.index') }}" class="u-s-m-b-30">
+                                        <form method="GET" action="{{ route('admin.mainteance_requests.index') }}"
+                                            class="u-s-m-b-30">
                                             <div class="form-group mb-0">
-                                                <select name="show_filter" class="form-control form-control-sm" id="show_filter" onchange="this.form.submit()">
-                                                    <option value="">اختر الحالة</option>
-                                                    <option value="1" {{ request('show_filter') == '1' ? 'selected' : '' }}>تمت مشاهدتها</option>
-                                                    <option value="0" {{ request('show_filter') == '0' ? 'selected' : '' }}>لم تتم مشاهدتها</option>
+                                                <select name="show_filter" class="form-control form-control-sm"
+                                                    id="show_filter" onchange="this.form.submit()">
+                                                    <option value=""> all</option>
+                                                    <option value="1" {{ request('show_filter') == '1' ? 'selected' : '' }}>seen </option>
+                                                    <option value="0" {{ request('show_filter') == '0' ? 'selected' : '' }}>not seen  </option>
                                                 </select>
                                             </div>
                                         </form>
@@ -48,10 +50,13 @@
                                                         <td>{{ $main->user ? $main->user->phone : 'No phone' }}</td>
                                                         <td>{{ $main->description }}</td>
                                                         <td style="display: flex; justify-content: center;">
-                                                            <form action="{{ route('admin.maintance_requests.toggleStatus', $main->id) }}" method="POST" style="display:inline;">
+                                                            <form
+                                                                action="{{ route('admin.maintance_requests.toggleStatus', $main->id) }}"
+                                                                method="POST" style="display:inline;">
                                                                 @csrf
                                                                 @method('PATCH')
-                                                                <button type="submit" class="btn btn-sm {{ $main->show ? 'btn-danger' : 'btn-success' }}">
+                                                                <button type="submit"
+                                                                    class="btn btn-sm {{ $main->show ? 'btn-danger' : 'btn-success' }}">
                                                                     {{ $main->show ? 'show' : 'new' }}
                                                                 </button>
                                                             </form>
@@ -60,6 +65,9 @@
                                                 @endforeach
                                             </tbody>
                                         </table>
+                                        <div class="pagination" style="display: flex; justify-content: center;">
+                                            {{$mainteances->links('pagination::bootstrap-4')}}
+                                        </div>
                                     </div>
 
                                 </div>

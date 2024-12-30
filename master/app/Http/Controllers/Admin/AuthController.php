@@ -53,13 +53,14 @@ class AuthController extends Controller
 
     public function dashboard()
     {
-        $totalSales = Order::sum('total_order'); // إجمالي المبيعات
+        $totalSales =Order::where('status', 'confirmed')->sum('total_order'); // إجمالي المبيعات
         $totalCustomers = User::count(); // عدد العملاء
         $totalMessages = Message::count(); // عدد الرسائل
         $recentOrders = Order::latest()->take(5)->get(); // آخر 5 طلبات
         // dd($totalSales);
+        $orders = Order::where('status', 'pending')->paginate(10);
         
-        return view('admin.dashboard', compact('totalSales', 'totalCustomers', 'totalMessages', 'recentOrders'));
+        return view('admin.dashboard', compact('totalSales', 'totalCustomers', 'totalMessages', 'recentOrders','orders'));
     
     }
     public function new(){

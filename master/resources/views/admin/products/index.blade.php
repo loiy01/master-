@@ -32,7 +32,6 @@
                                                 <tr>
                                                     <th class="image-column">Image</th>
                                                     <th>Name</th>
-                                                    <th class="description-column">Description</th>
                                                     <th>Price</th>
                                                     <th>Qty</th>
                                                     <th>Category</th>
@@ -50,7 +49,6 @@
                                                             @endif
                                                         </td>
                                                         <td class="name-column">{{ $product->name }}</td>
-                                                        <td class="description-column">{{ $product->description }}</td>
                                                         <td>{{ $product->price }}</td>
                                                         <td>{{ $product->quantity }}</td>
                                                         <td>{{ $product->category->name }}</td>
@@ -68,6 +66,9 @@
                                                 @endforeach
                                             </tbody>
                                         </table>
+                                        <div class="pagination" style="display: flex; justify-content: center;">
+                                        {{ $products->links('pagination::bootstrap-4')}}
+                                    </div>
                                     </div>
                                 </div>
                             </div>

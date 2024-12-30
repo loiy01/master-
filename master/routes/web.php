@@ -101,6 +101,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('User', [UserController::class,'index'])->name('user.index');
         Route::delete('User-del/{id}', [UserController::class, 'distroy'])->name('user.delete');
         Route::get('order-show', [OrderController::class,'index'])->name('order.index');
+        Route::put('/order-status', [OrderController::class, 'updateOrderStatus'])->name('order.updateStatus');
+
         Route::get('message-show', [MessageController::class,'index'])->name('message.index');
         Route::get('mainteance_requests-show', [MainteanceController::class,'index'])->name('mainteance_requests.index');
         Route::patch('mainteance_requests/{id}/toggle-status', [MainteanceController::class, 'toggleStatus'])->name('maintance_requests.toggleStatus');
