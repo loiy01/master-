@@ -1,80 +1,94 @@
 @include("auth.user.partials.header")
 <style>
-   .container_main {
-    position: relative;
-    width: 100%;
-    height: 250px; /* يمكنك تعديل القيمة حسب الحاجة */
-    overflow: hidden;
+/* التصميم الأساسي */
+.banner_section {
+    padding: 20px;
+    background: url("../images/banner.jpg") no-repeat center center/cover; /* إذا كانت هناك خلفية */
+    text-align: center;
+    color: #fff;
 }
 
-.image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* يحافظ على نسب الصورة ويغطي المساحة بالكامل */
+.banner_taital_main {
+    padding: 20px;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* إذا أردت إضافة تأثير تظليل */
+.banner_taital {
+    font-size: 2.5rem; /* الحجم الافتراضي */
+    margin-bottom: 15px;
 }
 
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-.container_main {
-    position: relative;
-    width: 100%;
-    height: 250px; /* يمكنك تعديل القيمة حسب الحاجة */
-    overflow: hidden;
-    direction: rtl; /* جعل الاتجاه من اليمين لليسار */
+.banner_text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
-.image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* يحافظ على نسب الصورة ويغطي المساحة بالكامل دون تشويه */
+.btn_main {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* تغيير المحاذاة الافتراضية */
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* تأثير التظليل عند التمرير على الصورة */
+.started_text a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
-.text {
-    position: absolute;
-    top: 50%;
-    right: 50%; /* تعديل الوضع إلى الجهة اليمنى */
-    transform: translate(50%, -50%);
-    color: white;
+.started_text.active a {
+    background-color: #007bff;
 }
 
-.project_main {
-    text-align: right; /* محاذاة النص لليمين */
+/* ميديا كويريز للشاشات الصغيرة جدًا */
+@media (max-width: 575.98px) {
+    .banner_taital {
+        font-size: 1.8rem;
+    }
+
+    .banner_text {
+        font-size: 1rem;
+    }
+
+    .btn_main {
+        flex-direction: column; /* ترتيب الأزرار عموديًا */
+        gap: 5px;
+    }
+
+    .started_text a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
 }
 
-.work_text {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
+/* ميديا كويريز للشاشات المتوسطة */
+@media (max-width: 768px) {
+    .banner_taital {
+        font-size: 2rem;
+    }
+
+    .banner_text {
+        font-size: 1.1rem;
+    }
+
+    .btn_main {
+        gap: 8px;
+    }
+
+    .started_text a {
+        font-size: 0.95rem;
+        padding: 9px 18px;
+    }
 }
 
-.some_text {
-    font-size: 16px;
+/* ميديا كويريز للشاشات الكبيرة */
+@media (min-width: 769px) {
+    .btn_main {
+        justify-content: flex-start; /* المحاذاة إلى اليسار */
+    }
 }
-
-
 </style>
 <div class="header_section">
 

@@ -110,7 +110,7 @@
 
     .started_text a {
         color: white;
-        background-color: #007bff;
+        background-color:#fda417;
         padding: 10px 20px;
         border-radius: 5px;
         text-decoration: none;
@@ -123,6 +123,83 @@
     height: 24px; /* تصغير الارتفاع */
     width: 24px;  /* تصغير العرض */
 }
+
+   .container_main {
+    position: relative;
+    width: 100%;
+    height: 250px; /* يمكنك تعديل القيمة حسب الحاجة */
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يحافظ على نسب الصورة ويغطي المساحة بالكامل */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* إذا أردت إضافة تأثير تظليل */
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.container_main {
+    position: relative;
+    width: 100%;
+    height: 250px; /* يمكنك تعديل القيمة حسب الحاجة */
+    overflow: hidden;
+    direction: rtl; /* جعل الاتجاه من اليمين لليسار */
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يحافظ على نسب الصورة ويغطي المساحة بالكامل دون تشويه */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* تأثير التظليل عند التمرير على الصورة */
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    right: 50%; /* تعديل الوضع إلى الجهة اليمنى */
+    transform: translate(50%, -50%);
+    color: white;
+}
+
+.project_main {
+    text-align: right; /* محاذاة النص لليمين */
+}
+
+.work_text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.some_text {
+    font-size: 16px;
+}
+
+
+
 @media (max-width: 991.98px) {
     .navbar-collapse {
         background-color: rgb(49, 62, 66); /* اللون المخصص للخلفية */
