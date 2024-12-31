@@ -1,14 +1,10 @@
-<style>
-    .map-responsive iframe {
-    width: 100%;
-    height: 400px; /* تعديل الارتفاع */
-}
-</style>
-@include("auth.user.partials.header")
 
-<div class="images">
-@include("auth.user.partials.navbar")
-</div>
+
+
+
+@extends('auth.user.master')
+
+@section('content')
 
 <div class="contact_section layout_padding">
     <div class="container">
@@ -51,4 +47,5 @@
     </div>
 </div>
 
-@include("auth.user.partials.footer")
+@endsection
+

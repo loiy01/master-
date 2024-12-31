@@ -17,7 +17,13 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/css/profile.css">
+      <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/css/cart.css">
       <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/css/appoi.css">
+      <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/css/login.css">
+      <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/css/register.css">
+
+
+
 
       <!-- bootstrap css -->
       <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/css1/bootstrap.min.css">
