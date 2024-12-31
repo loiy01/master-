@@ -35,7 +35,7 @@ class AuthenticatedSessionController extends Controller
         // محاولة تسجيل الدخول
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             // تسجيل الدخول ناجح
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/');
         }
     
         // إذا فشل تسجيل الدخول، إعادة توجيه مع رسالة خطأ
