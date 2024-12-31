@@ -10,12 +10,15 @@
       <!-- mobile metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <link rel="icon" href={{asset('assets/images/logo1.png')}} type="image/png">
       <!-- site metas -->
-      <title>Services</title>
+      <title>الاختراق الفني</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
       <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/css/profile.css">
+      <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/css/appoi.css">
+
       <!-- bootstrap css -->
       <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/css1/bootstrap.min.css">
       <!-- style css -->
