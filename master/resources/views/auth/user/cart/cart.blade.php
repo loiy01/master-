@@ -30,7 +30,7 @@
                         </form>
                         <a href="{{ route('cart.remove', $productId) }}" class="remove-btn">حذف</a>
                     </div>
-                    <p class="mt-2">{{ $details['price'] }} د.أ</p>
+                    <p class="mt-2 text-right">{{ $details['price'] }} د.أ</p>
                 </div>
             </div>
         @endforeach
@@ -41,7 +41,7 @@
                    class="form-control text-right" required placeholder="أدخل عنوان الشحن">
         </div>
 
-        <button onclick="showConfirmation()" class="checkout-btn mt-4">الانتقال إلى الدفع</button>
+        <button onclick="showConfirmation()" class="checkout-btn mt-4 mb-1">الانتقال إلى الدفع</button>
     @endif
 </div>
 

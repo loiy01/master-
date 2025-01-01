@@ -356,89 +356,40 @@
 </div>
 <!-- projects section end -->
 <!-- testimonial section start -->
-<div class="testimonial_section layout_padding">
+<div class="testimonial_section" style="background-color: rgb(236, 239, 241); padding: 40px 0;">
    <div class="container">
-      <div id="costum_slider" class="carousel slide" data-ride="carousel">
+      <h1 class="testimonial_taital text-center" style="color: rgb(49, 62, 66); font-weight: bold;">آراء العملاء</h1>
+      <div id="testimonial_slider" class="carousel slide" data-bs-ride="carousel" style="position: relative;">
          <div class="carousel-inner">
+            <!-- أول خدمة: القص -->
             <div class="carousel-item active">
-               <div class="row">
-                  <div class="col-md-12">
-                     <h1 class="testimonial_taital">Testimonial</h1>
-                     <div class="testimonial_section_2">
-                        <h2 class="client_name_text">Molik <span style="float: right;"><img
-                                 src="images/quick-icon.png"></span></h2>
-                        <p class="textimonial_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                           nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                     </div>
-                     <div class="testimonial_section_2">
-                        <h2 class="client_name_text"><img src="images/quick-icon.png"> <span
-                              style="float: right;">jeaanson</span></h2>
-                        <p class="textimonial_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                           nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                     </div>
-                  </div>
+               <div class="testimonial_item text-center" style="padding: 20px;">
+                  <h2 class="client_name_text text-right" style="color: rgb(49, 62, 66); font-weight: bold; margin-bottom: 10px;">أحمد</h2>
+                  <p class="testimonial_text" style="color: #555;">خدمة القص كانت ممتازة! المعدات كانت حديثة والدقة في العمل رائعة، الفتحات كانت نظيفة وسريعة. أشكر الفريق على احترافيتهم.</p>
                </div>
             </div>
+            <!-- خدمة فتح الكور -->
             <div class="carousel-item">
-               <div class="row">
-                  <div class="col-md-12">
-                     <h1 class="testimonial_taital">Testimonial</h1>
-                     <div class="testimonial_section_2">
-                        <h2 class="client_name_text">Molik <span style="float: right;"><img
-                                 src="images/quick-icon.png"></span></h2>
-                        <p class="textimonial_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                           nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                     </div>
-                     <div class="testimonial_section_2">
-                        <h2 class="client_name_text"><img src="images/quick-icon.png"> <span
-                              style="float: right;">jeaanson</span></h2>
-                        <p class="textimonial_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                           nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                     </div>
-                  </div>
+               <div class="testimonial_item text-center" style="padding: 20px;">
+                  <h2 class="client_name_text text-right" style="color: rgb(49, 62, 66); font-weight: bold; margin-bottom: 10px;">يوسف</h2>
+                  <p class="testimonial_text" style="color: #555;">خدمات رائعة جدا.</p>
                </div>
             </div>
+            <!-- خدمة الصيانة -->
             <div class="carousel-item">
-               <div class="row">
-                  <div class="col-md-12">
-                     <h1 class="testimonial_taital">Testimonial</h1>
-                     <div class="testimonial_section_2">
-                        <h2 class="client_name_text">Molik <span style="float: right;"><img
-                                 src="images/quick-icon.png"></span></h2>
-                        <p class="textimonial_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                           nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                     </div>
-                     <div class="testimonial_section_2">
-                        <h2 class="client_name_text"><img src="images/quick-icon.png"> <span
-                              style="float: right;">jeaanson</span></h2>
-                        <p class="textimonial_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                           nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                     </div>
-                  </div>
+               <div class="testimonial_item text-center" style="padding: 20px;">
+                  <h2 class="client_name_text text-right" style="color: rgb(49, 62, 66); font-weight: bold; margin-bottom: 10px;">خليل</h2>
+                  <p class="testimonial_text" style="color: #555;">لقد استفدنا كثيراً من خدمة صيانة المعدات. الفريق كان على قدر عالي من الكفاءة، وتم صيانة جميع المعدات بشكل مثالي.</p>
                </div>
             </div>
          </div>
-         <a class="carousel-control-prev" href="#costum_slider" role="button" data-slide="prev">
-            <i class="fa fa-angle-left"></i>
-         </a>
-         <a class="carousel-control-next" href="#costum_slider" role="button" data-slide="next">
-            <i class="fa fa-angle-right"></i>
-         </a>
+         <!-- أزرار التنقل -->
+        
       </div>
    </div>
 </div>
+
+
 <!-- testimonial section end -->
 
 @include("auth.user.partials.footer")

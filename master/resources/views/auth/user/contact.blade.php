@@ -1,7 +1,5 @@
 
 
-
-
 @extends('auth.user.master')
 
 @section('content')
@@ -27,11 +25,11 @@
                     
                     <form action="{{ route('con') }}" method="POST">
                         @csrf
-                        <div class="mail_section_1">
-                            <input type="text" class="mail_text" placeholder="الاسم" name="Name" required>
-                            <input type="email" class="mail_text" placeholder="البريد الالكتروني" name="Email" required>
-                            <textarea class="massage-bt" placeholder="الرسالة" rows="5" id="comment" name="Message" required></textarea>
-                            <button type="submit" class="btn btn-success w-100 py-3">ارسال</button>
+                        <div class="contact-form-container">
+                            <input type="text" class="mail-text contact-form-control" placeholder="الاسم" name="Name" required>
+                            <input type="email" class="mail-text contact-form-control" placeholder="البريد الالكتروني" name="Email" required>
+                            <textarea class="contact-message-bt contact-form-control" placeholder="الرسالة" rows="5" id="comment" name="Message" required></textarea>
+                            <button type="submit" class="custom-btn-success w-100 py-3">ارسال</button>
                         </div>
                     </form>
                 </div>
@@ -48,4 +46,3 @@
 </div>
 
 @endsection
-

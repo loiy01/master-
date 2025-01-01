@@ -63,9 +63,9 @@
                              alt="{{ $product->name }}" 
                              style="max-height: 200px; object-fit: contain;">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">{{ $product->name }}</h5>
-                            <p class="card-text">{{ $product->description }}</p>
-                            <p class="card-text"><strong>السعر:</strong> {{ $product->price }} د.أ</p>
+                            <h5 class="card-title text-center">{{ $product->name }}</h5>
+                            <p class="card-text text-right">{{ $product->description }}</p>
+                            <p class="card-text text-right"><strong>السعر:</strong> {{ $product->price }} د.أ</p>
                             <div class="mt-auto">
                                 <form action="{{ route('cart.store') }}" method="POST" class="d-flex align-items-center gap-2">
                                     @csrf
@@ -76,7 +76,7 @@
                                            min="1" 
                                            max="{{ $product->quantity }}" 
                                            class="form-control quantity-input">
-                                    <button type="submit" class="btn btn-success">أضف إلى السلة</button>
+                                    <button type="submit" class="btn btn-success" style="background-color:  #007bff;">أضف إلى السلة</button>
                                 </form>
                             </div>
                         </div>
