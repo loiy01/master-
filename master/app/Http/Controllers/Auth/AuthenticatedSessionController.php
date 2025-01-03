@@ -24,27 +24,39 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
-    public function store(Request $request)
-    {
-        // التحقق من المدخلات
-        $request->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required', 'min:8'],
-        ]);
+// LoginController.php
+public function store(Request $request)
+{
+    // التحقق من المدخلات
+    $request->validate([
+        'email' => ['required', 'email'],
+        'password' => ['required'],
+    ]);
+
+    // التحقق من وجود الايميل أولاً
+    $user = \App\Models\User::where('email', $request->email)->first();
     
-        // محاولة تسجيل الدخول
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            // تسجيل الدخول ناجح
-            return redirect()->intended('/');
-        }
-    
-        // إذا فشل تسجيل الدخول، إعادة توجيه مع رسالة خطأ
-        return Redirect::back()
+    if (!$user) {
+        return back()
+            ->withInput()
             ->withErrors([
-                'email' => 'البريد الإلكتروني أو كلمة المرور غير صحيحة.',
-            ])
-            ->withInput();
+                'email' => 'البريد الإلكتروني غير مسجل في النظام'
+            ]);
     }
+
+    // محاولة تسجيل الدخول
+    if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+        // تسجيل الدخول ناجح
+        return redirect()->intended('/');
+    }
+
+    // إذا وصلنا هنا، فهذا يعني أن كلمة المرور خاطئة
+    return back()
+        ->withInput()
+        ->withErrors([
+            'password' => 'كلمة المرور غير صحيحة'
+        ]);
+}
 
     /**
      * Destroy an authenticated session.
