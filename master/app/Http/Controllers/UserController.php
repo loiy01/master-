@@ -17,6 +17,9 @@ class UserController extends Controller
        
         return redirect()->route('admin.user.index')->with('success', 'Product deleted successfully!');
     }
+    public function about(){
+        return view("auth.user.about");
+    }
  
     
 

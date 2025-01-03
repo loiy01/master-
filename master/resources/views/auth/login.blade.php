@@ -35,7 +35,7 @@
             @csrf
 
             <!-- Input Email -->
-            <input type="email" name="email" placeholder="البريد الإلكتروني" required value="{{ old('email') }}">
+            <input type="email" name="email" placeholder="البريد الإلكتروني" style="direction: rtl; text-align: right;" required value="{{ old('email') }}">
             @error('email')
                 <div class="error" style="color: red; font-size: 12px; margin-top: 5px;">
                     {{ $message }}
@@ -43,7 +43,7 @@
             @enderror
 
             <!-- Input Password -->
-            <input type="password" name="password" placeholder="الرقم السري" required>
+            <input type="password" name="password" placeholder="الرقم السري" style="direction: rtl; text-align: right;" required>
             @error('password')
                 <div class="error" style="color: red; font-size: 12px; margin-top: 5px;">
                     {{ $message }}

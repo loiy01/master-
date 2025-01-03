@@ -219,6 +219,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
         <ul class="navbar-nav mr-auto">
     <li class="nav-item {{ Route::is('home') ? 'active' : '' }}">
         <a href="{{ route('home') }}" class="nav-link">الرئيسية</a>
@@ -233,7 +234,7 @@
         <a href="{{ route('contact') }}" class="nav-link">التواصل</a>
     </li>
     <li class="nav-item {{ request()->is('about') ? 'active' : '' }}">
-        <a href="/about.html" class="nav-link">من نحن</a>
+        <a href={{route("about")}} class="nav-link">من نحن</a>
     </li>
 </ul>
 

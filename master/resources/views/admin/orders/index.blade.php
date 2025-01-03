@@ -34,10 +34,12 @@
                         <div class="col-lg-9 col-md-12">
                             <div class="dash__box dash__box--shadow dash__box--radius dash__box--bg-white u-s-m-b-30">
                                 <div class="dash__pad-2">
+                                    <div style="display: flex; justify-content: space-between;">
                                     <h1 class="dash__h1 u-s-m-b-14">Orders</h1>
 
 
                                     <form method="GET" action="{{ route('admin.order.index') }}">
+                                       
                                         <select name="status" style="width:200px" class="form-control" onchange="this.form.submit()">
                                             <option value="">all</option>
                                             <option value="pending" {{ request('status') == 'pending' ? 'selected' : '' }}>Pending</option>
@@ -45,6 +47,7 @@
                                             <option value="canceled" {{ request('status') == 'canceled' ? 'selected' : '' }}>Cancelled</option>
                                         </select>
                                     </form>
+                                    </div>
                                                 <table class="dash__table">
                                                     <thead>
                                                         <tr>

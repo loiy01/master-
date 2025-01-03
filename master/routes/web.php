@@ -74,6 +74,7 @@ Route::get('/ma', [\App\Http\Controllers\user\MainteanceController::class, 'inde
 Route::get('/prod', [\App\Http\Controllers\user\ProductController::class, 'index'])->name('prod');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/con', [ContactController::class, 'store'])->name('con');
+Route::get('/about', [UserController::class, 'about'])->name('about');
 
 
 

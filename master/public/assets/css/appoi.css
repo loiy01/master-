@@ -131,7 +131,7 @@
     
 
     .contact-form-container {
-        background: #2d3748;
+        background: #313e42;
         padding: 2rem;
         border-radius: 0.5rem;
         max-width: 28rem;
@@ -157,6 +157,7 @@
     .custom-btn-success {
         background: #f6a120 !important;
         border: none !important;
+        color: white;
     }
     
     .custom-btn-success:hover {

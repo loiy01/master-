@@ -1,4 +1,4 @@
-<div class="footer_section" style="background-color: rgb(49, 62, 66); padding: 20px 0; color: #fff; font-size: 14px;">
+<div class="footer_section mt-5" style="background-color: rgb(49, 62, 66); padding: 20px 0; color: #fff; font-size: 14px;">
    <div class="container">
       <div class="row">
          <div class="col-md-4 text-center">
@@ -40,5 +40,5 @@
       <script src="{{asset('assets')}}/js2/bootstrap.bundle.min.js"></script>
       <script src="{{asset('assets')}}/js2/jquery-3.0.0.min.js"></script>
       <script src="{{asset('assets')}}/js2/plugin.js"></script>
-   </body>
+  
 
