@@ -41,7 +41,7 @@
 </div>
 
 <div class="container" dir="rtl">
-    <h1 class="text-center">المنتجات</h1>
+    <h1 class="text-center pt-3">المنتجات</h1>
 
     <!-- Form to search products -->
     <form action="{{ route('prod') }}" method="GET">

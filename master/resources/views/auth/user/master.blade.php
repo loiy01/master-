@@ -2,6 +2,7 @@
 <html lang="en">
 @include("auth.user.partials.header")
 
+
 <body>
     <div class="images">
     @include("auth.user.partials.navbar")

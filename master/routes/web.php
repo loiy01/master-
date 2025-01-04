@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\user\AppointmentController;
 use App\Http\Controllers\user\CartController;
 use App\Http\Controllers\User\ContactController;
+use App\Http\Controllers\user\OrderProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProductController;
@@ -55,6 +56,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/ord', [\App\Http\Controllers\user\OrderController::class, 'index'])->name('ord');
+    Route::get('/orders/{id}', [\App\Http\Controllers\user\OrderController::class, 'show'])->name('orders.details');
     Route::post('/ap', [AppointmentController::class, 'store'])->name('ap.store');
     Route::get('/prod', [\App\Http\Controllers\user\ProductController::class, 'index'])->name('prod');
     Route::post('/cart', [CartController::class, 'store'])->name('cart.store'); // لإضافة منتج إلى السلة

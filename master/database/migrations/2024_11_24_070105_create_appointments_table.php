@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('service_type'); // Service type as varchar
             $table->dateTime('time'); // Time as datetime
             $table->text('description')->nullable(); // Description as text, nullable
+            $table->string('location');
             $table->boolean('show')->default(false);
             $table->timestamps(); // Created at and Updated at timestamps
 

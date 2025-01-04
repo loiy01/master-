@@ -28,6 +28,13 @@
                     <button style="background-color: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">تعديل الملف الشخصي</button>
                 </a>
             </div>
+
+            <!-- New Button for Orders -->
+            <div class="new-order-button" style="margin-top: 20px;">
+                <a href="{{ route('ord') }}">
+                    <button style="background-color: #f6a120; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">عرض الطلبات</button>
+                </a>
+            </div>
         </div>
     </div>
 </div>

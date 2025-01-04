@@ -91,7 +91,6 @@
 }
 </style>
 <div class="header_section">
-
    @include("auth.user.partials.navbar")
    <div class="banner_section layout_padding">
       <div dir="rtl" class="text-right">
@@ -110,7 +109,6 @@
          </div>
       </div>
    </div>
-
 </div>
 <div class="services_section layout_padding">
    <div class="container-fluid">
@@ -121,10 +119,7 @@
          </div>
       </div>
       <div class="services_section_2">
-
-
          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-            <!-- Card: فتحات كور -->
             <div class="col">
                <div class="card border-0 shadow text-center">
                   <div class="card-img-top p-3">
@@ -137,8 +132,6 @@
                   </div>
                </div>
             </div>
-
-            <!-- Card: قص باطون -->
             <div class="col">
                <div class="card border-0 shadow text-center">
                   <div class="card-img-top p-3">
@@ -151,8 +144,6 @@
                   </div>
                </div>
             </div>
-
-            <!-- Card: العدد -->
             <div class="col">
                <div class="card border-0 shadow text-center">
                   <div class="card-img-top p-3">
@@ -165,8 +156,6 @@
                   </div>
                </div>
             </div>
-
-            <!-- Card: صيانة -->
             <div class="col">
                <div class="card border-0 shadow text-center">
                   <div class="card-img-top p-3">
@@ -175,14 +164,11 @@
                   </div>
                   <div class="card-body">
                      <h5 class="card-title mb-3">صيانة</h5>
-                     <!-- Button that triggers the modal -->
                      <a href="#" class="btn btn-outline-primary w-100 py-2" data-bs-toggle="modal"
                         data-bs-target="#maintenanceModal">طلب صيانة</a>
                   </div>
                </div>
             </div>
-
-            <!-- Modal Structure -->
             <div class="modal fade" id="maintenanceModal" tabindex="-1" aria-labelledby="maintenanceModalLabel"
                aria-hidden="true">
                <div class="modal-dialog" style="max-width: 500px; width: 100%;">
@@ -195,7 +181,6 @@
                            style="color: white;"></button>
                      </div>
                      <div class="modal-body" style="padding: 30px;">
-                        <!-- Form inside the modal -->
                         <form action="{{ route('man') }}" method="POST">
                            @csrf
                            <div class="mb-3">
@@ -212,28 +197,16 @@
                                  style="background-color: #34495e; color: white; border: 1px solid #2c3e50; font-size: 1.1rem;">
                            </div>
                            <button type="submit" class="btn btn-primary w-100"
-                              style="background-color: #16a085; border-color: #1abc9c; font-size: 1.2rem;">ارسال</button>
+                              style="background-color: #fda417; border-color: #fda417; font-size: 1.2rem;">ارسال</button>
                         </form>
                      </div>
                   </div>
                </div>
             </div>
-
-
          </div>
-
-
-
-
       </div>
-
    </div>
 </div>
-<!-- services section end -->
-<!-- about sectuion start -->
-
-<!-- about sectuion end -->
-<!-- projects section start -->
 <div class="projects_section layout_padding">
    <div class="container">
       <div class="row">
@@ -354,28 +327,23 @@
       </div>
    </div>
 </div>
-<!-- projects section end -->
-<!-- testimonial section start -->
 <div class="testimonial_section" style="background-color: rgb(236, 239, 241); padding: 40px 0;">
    <div class="container">
       <h1 class="testimonial_taital text-center" style="color: rgb(49, 62, 66); font-weight: bold; margin-bottom: 30px;">آراء العملاء</h1>
       <div id="testimonial_slider" class="carousel slide" data-bs-ride="carousel" style="position: relative;">
          <div class="carousel-inner">
-            <!-- أول خدمة: القص -->
             <div class="carousel-item active">
                <div class="testimonial_item text-center" style="padding: 20px; margin-bottom: 30px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                   <h2 class="client_name_text text-right" style="color: rgb(49, 62, 66); font-weight: bold; margin-bottom: 10px;">أحمد</h2>
                   <p class="testimonial_text" style="color: #555;">خدمة القص كانت ممتازة! المعدات كانت حديثة والدقة في العمل رائعة، الفتحات كانت نظيفة وسريعة. أشكر الفريق على احترافيتهم.</p>
                </div>
             </div>
-            <!-- خدمة فتح الكور -->
             <div class="carousel-item">
                <div class="testimonial_item text-center" style="padding: 20px; margin-bottom: 30px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                   <h2 class="client_name_text text-right" style="color: rgb(49, 62, 66); font-weight: bold; margin-bottom: 10px;">يوسف</h2>
                   <p class="testimonial_text" style="color: #555;">خدمات رائعة جدا.</p>
                </div>
             </div>
-            <!-- خدمة الصيانة -->
             <div class="carousel-item">
                <div class="testimonial_item text-center" style="padding: 20px; margin-bottom: 30px; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                   <h2 class="client_name_text text-right" style="color: rgb(49, 62, 66); font-weight: bold; margin-bottom: 10px;">خليل</h2>
@@ -383,18 +351,9 @@
                </div>
             </div>
          </div>
-         <!-- أزرار التنقل -->
       </div>
    </div>
 </div>
-
-
-
-<!-- testimonial section end -->
-
 @include("auth.user.partials.footer")
-<!-- Bootstrap CSS -->
-
-<!-- Bootstrap JS and Popper (required for Bootstrap modals) -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
