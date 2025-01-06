@@ -35,6 +35,9 @@
         <div class="form-group">
             <label for="time" class="text-right">وقت الحجز:</label>
             <input type="datetime-local" id="time" name="time" dir="rtl" required class="form-control">
+            @error('time')
+        <span class="text-danger">{{ $message }}</span>
+    @enderror
         </div>
 
         <div class="form-group">

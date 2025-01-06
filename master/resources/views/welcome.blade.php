@@ -304,7 +304,7 @@
                            </div>
                            <div class="col-md-4">
                               <div class="container_main">
-                                 <img src="images/img-3.png" alt="" class="image">
+                                 <img src={{asset('assets/images/cut6.jpeg')}} alt="" class="image">
                                  <div class="overlay">
                                     <div class="text">
                                        <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
@@ -312,9 +312,7 @@
                                  </div>
                               </div>
                               <div class="project_main">
-                                 <h2 class="work_text">Home Work</h2>
-                                 <p class="dummy_text">alteration in some form, by injected humour, or randomised words
-                                    which don't look even slightly believable. If you are going to use</p>
+                                 <h2 class="work_text">قص</h2>
                               </div>
                            </div>
                         </div>

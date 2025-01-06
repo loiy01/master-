@@ -24,7 +24,7 @@ class CartController extends Controller
     
         // تحقق من الكمية المتاحة
         if ($product->quantity < $request->quantity) {
-            return redirect()->back()->with('error', 'Quantity requested exceeds available stock.');
+            return redirect()->back()->with('error', 'الكمية المطلوبة تتجاوز المخزون المتوفر');
         }
     
         // استرجاع السلة من الجلسة أو إنشاء سلة جديدة
@@ -67,6 +67,15 @@ class CartController extends Controller
         return redirect()->route('cart.index')->with('success', 'Cart updated successfully!');
     }
 
+/*************  ✨ Codeium Command ⭐  *************/
+    /**
+     * Remove a product from the cart.
+     *
+     * @param int $productId The ID of the product to be removed.
+     * @return \Illuminate\Http\RedirectResponse Redirects to the cart index page with a success message.
+     */
+
+/******  1d988713-1744-4ea1-9160-9c829a36644d  *******/
     public function remove($productId)
     {
         $cart = session()->get('cart', []);

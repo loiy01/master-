@@ -22,6 +22,10 @@ class AppointmentController extends Controller
             'time' => 'required|date|after_or_equal:today',
             'description' => 'nullable|string',
             'location' => 'required|string',
+        ],
+        [
+            'time.after_or_equal' => 'لا يمكن الحجز في موعد سابق. يرجى اختيار تاريخ مناسب.', // رسالة خطأ مخصصة
+            'time.required' => 'حقل التاريخ مطلوب.',
         ]);
 
         // التأكد من أن المستخدم قد قام بتسجيل الدخول

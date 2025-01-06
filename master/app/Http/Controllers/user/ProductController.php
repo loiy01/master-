@@ -22,5 +22,6 @@ class ProductController extends Controller
     return view('auth.user.products.products', compact('products'));
 }
 
+
     
 }

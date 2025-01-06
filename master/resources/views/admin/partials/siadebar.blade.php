@@ -1,3 +1,6 @@
+@php
+    use App\Models\Admin;
+@endphp
 <div class="dash__box dash__box--bg-white dash__box--shadow u-s-m-b-30">
                                         <div class="dash__pad-1">
 
@@ -38,7 +41,7 @@
                                                 </a>
                                             </li>
                                                 
-                                            
+                                            @if(Auth::check() && Admin::where('id', Auth::id())->value('is_super') == 1)
                                                         <li>
                                                         <a href="{{ route('admin.admin.index') }}">
                                                             <div class="admin_list">
@@ -50,6 +53,7 @@
                                                             </div>
                                                         </a>
                                                         </li>
+                                                        @endif
                                                 
                                                 
                                                 <li>
