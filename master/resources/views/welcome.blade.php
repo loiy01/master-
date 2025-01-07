@@ -232,9 +232,7 @@
                               <div class="container_main">
                                  <img src={{asset('assets/images/newcore2.png')}} alt="" class="image">
                                  <div class="overlay">
-                                    <div class="text">
-                                       <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                    </div>
+                                    
                                  </div>
                               </div>
                               <div class="project_main">
@@ -247,7 +245,7 @@
                                  <img src={{asset('assets/images/newcore4.png')}}  alt="" class="image">
                                  <div class="overlay">
                                     <div class="text">
-                                       <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
+                                       
                                     </div>
                                  </div>
                               </div>
@@ -261,7 +259,7 @@
                                  <img src={{asset('assets/images/newcore3.png')}}  alt="" class="image">
                                  <div class="overlay">
                                     <div class="text">
-                                       <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
+                                       
                                     </div>
                                  </div>
                               </div>
@@ -279,7 +277,7 @@
                                  <img src={{asset('assets/images/newcut1.png')}}  alt="" class="image">
                                  <div class="overlay">
                                     <div class="text">
-                                       <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
+                                       
                                     </div>
                                  </div>
                               </div>
@@ -293,7 +291,7 @@
                                  <img src={{asset('assets/images/newcut2.png')}}  alt="" class="image">
                                  <div class="overlay">
                                     <div class="text">
-                                       <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
+                                       
                                     </div>
                                  </div>
                               </div>
@@ -307,7 +305,7 @@
                                  <img src={{asset('assets/images/cut6.jpeg')}} alt="" class="image">
                                  <div class="overlay">
                                     <div class="text">
-                                       <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
+                                       
                                     </div>
                                  </div>
                               </div>
